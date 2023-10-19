@@ -22,7 +22,7 @@ def ftp_login(host, port, username, password):
         ftp.login(user=username, passwd=password)
         print(f'{Fore.WHITE}[{Fore.YELLOW}MEGA{Fore.WHITE}] {host}|{port}|{username}|{password} -> {Fore.GREEN}OK')
         with open('result_ftp.txt', 'a') as f:
-            f.write(f'Success! {host}|{port}|{username}|{password}\n')
+            f.write(f'{host}|{port}|{username}|{password}\n')
         ftp.quit()
     except:
         print(f'{Fore.WHITE}[{Fore.YELLOW}MEGA{Fore.WHITE}] {host}|{port}|{username}|{password} -> {Fore.RED}NO')
